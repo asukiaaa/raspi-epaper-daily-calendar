@@ -20,6 +20,12 @@ Interface config | B
 
 See [wiki of epaper module 7.5inch_e-Paper_HAT_(B)](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_(B)).
 
+Enable SPI by raspi-config.
+```sh
+sudo raspi-config
+# Interfacing Options -> SPI -> YES
+```
+
 Setup BCM2835 libraries.
 ```sh
 cd /tmp
