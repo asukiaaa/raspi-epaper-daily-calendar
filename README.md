@@ -35,19 +35,24 @@ sudo make install
 Setup python3
 ```sh
 sudo apt update
-sudo apt install python3-pip python3-pil python3-numpy
-pip3 install RPi.GPIO spidev pytz
+sudo apt install -y python3-pip python3-pil python3-numpy python3-spidev
+pip3 install RPi.GPIO pytz
 ```
 
 Setup library of waveshare_epd.
 ```sh
-sudo apt install git wiringpi
+sudo apt install -y git
 mkdir ~/gitprojects
 cd ~/gitprojects
 git clone https://github.com/waveshare/e-Paper
 
-# change python3.9 to current version if needed
-ln -s ~/gitprojects/e-Paper/RaspberryPi_JetsonNano/python/lib/waveshare_epd/ .local/lib/python3.9/site-packages/
+# change the version of python in the following command if needed
+ln -s ~/gitprojects/e-Paper/RaspberryPi_JetsonNano/python/lib/waveshare_epd/ ~/.local/lib/python3.9/site-packages/
+```
+
+Setup fonts.
+```sh
+sudo apt install -y fonts-noto
 ```
 
 ## Run
